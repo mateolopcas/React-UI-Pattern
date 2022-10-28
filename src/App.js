@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react'
 import './App.css';
+import Header from './components/Header'
+import Content from './components/Content'
+import Modal from './components/Modal'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [liquor, setLiquor] = useState('')
+    const [drink, setDrink] = useState('')
+
+    return (
+        <div>
+            <Header 
+            setLiquor={setLiquor}
+            />
+            <Content 
+            liquor={liquor}
+            setDrink={setDrink}
+            />
+            <Modal
+            drink={drink}
+            />
+        </div>
+    );
 }
 
 export default App;
