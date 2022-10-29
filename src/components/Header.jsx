@@ -18,7 +18,6 @@ function Header(props) {
             <button className='hamburger'
             onClick={handleClick}>
                 <i className='menuIcon material-icons'>menu</i>
-                <i className='closeIcon material-icons' style={{display: 'none'}}>close</i>
             </button>
         </div>
     )
